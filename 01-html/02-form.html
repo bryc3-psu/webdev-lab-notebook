@@ -1,14 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise 02 - Form</title>
-  </head>
-  <body>
-    <main>
-      <!-- Add your code here -->
-    </main>
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Exercise 02 - Form</title>
+	</head>
+	<body>
+		<main>
+			<!-- Add your code here -->
+			<h1>Roth IRA Calculator</h1>
+			<form>
+				<div>
+					<label for="balance">Balance ($)</label><br>
+					<input type="text" id="balance" name="balance">
+				</div>
+				<br>
+				<div>
+					<label for="annual-contribution">Annual contribution (4)</label><br>
+					<input type="text" id="annual-contribution" name="annual-contribution">
+				</div>
+				<br>
+				<!-- 
+        **NOTE:** In order to match the image (i.e. no border styling) while also 
+        following the no inline CSS guidelines, I am just using plain <div> and
+        <span> instead of <fieldset>/<legend>. This causes my only warning from
+        WAVE, but I do not think it is avoidable given the requirement to exactly
+        match the image and that we can not use CSS.
+
+        If CSS were allowed, I believe something like this would work:
+
+        <fieldset style="border: none; padding: 0; margin: 0;">
+          <legend>Maximize contributions?</legend>
+          ...
+        </fieldset>
+        -->
+				<div>
+          <!-- I am using <span> instad of <label> here as WAVE marked a <label> without a for attr with a warning -->
+          <span>Maximize contributions?</span><br />
+					<input type="radio" id="maximize-yes" name="maximize" value="yes">
+					<label for="maximize-yes">Yes</label>
+					<input type="radio" id="maximize-no" name="maximize" value="no">
+					<label for="maximize-no">No</label>
+				</div>
+				<br>
+				<div>
+					<label for="rate-of-return">Expected rate of return (5)</label><br>
+					<input type="number" id="rate-of-return" name="rate-of-return">
+				</div>
+				<br>
+				<div>
+					<label for="current-age">Current age</label><br>
+					<input type="number" id="current-age" name="current-age">
+				</div>
+				<br>
+				<div>
+					<label for="retirement-age">Retirement age</label><br>
+					<input type="number" id="retirement-age" name="retirement-age">
+				</div>
+				<br>
+				<div>
+					<label for="tax-rate">Marginal tax rate (%)</label><br>
+					<input type="number" id="tax-rate" name="tax-rate">
+				</div>
+				<br>
+				<div>
+					<input type="submit" value="Calculate">
+					<input type="reset" value="Reset">
+				</div>
+			</form>
+
+			<p>This exercise is a simplified version of the Roth IRA Calculator at <a href="https://www.calculator.net/roth-ira-calculator.html">Calculator.net</a></p>
+		</main>
+	</body>
 </html>
