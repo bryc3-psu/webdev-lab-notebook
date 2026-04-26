@@ -14,6 +14,9 @@
   --asoiaf-text: #333;
   --asoiaf-heading-color: #1c2028;
   --asoiaf-heading-border: #b8bcc680;
+  --asoiaf-covers-bg: #e2e4e8;
+  --asoiaf-covers-border: #bcc0c9;
+  --asoiaf-cover-shadow: #22222259;
 }
 
 body {
@@ -25,9 +28,9 @@ body {
  * ---------------------------------------------------------------*/
 
 .asoiaf {
-  background-color: var(--asoiaf-page-bg);
   font-family: 'Arial', sans-serif;
   color: var(--asoiaf-text);
+  background-color: var(--asoiaf-page-bg);
 }
  
 .asoiaf-nav {
@@ -35,11 +38,11 @@ body {
 }
  
 .asoiaf-nav-list {
-  margin: 0;
-  padding: 1.1em 2em;
   display: flex;
   justify-content: center;
   list-style: none;
+  margin: 0;
+  padding: 1.1em 2em;
   gap: 1em;
 }
  
@@ -53,8 +56,8 @@ body {
 }
  
 .asoiaf-nav-link:hover {
-  background-color: var(--ice-blue-juvie);
   color: var(--dark-slate-infinity);
+  background-color: var(--ice-blue-juvie);
   border-radius: .2em;
 }
 
@@ -85,4 +88,22 @@ body {
   font-size: 0.8em;
   line-height: 1.5em;
   margin: 0.8em 0.5em;
+}
+
+.asoiaf-covers {
+  display: flex;
+  justify-content: center;
+  margin: 0.5em 0em 1em;
+  gap: 1.2em;
+}
+ 
+.asoiaf-cover-img {
+  display: flex;
+  width: 28%;
+  height: auto;
+  border-radius: 4px;
+}
+ 
+.asoiaf-cover-img:hover {
+  box-shadow: 3px 8px 20px var(--asoiaf-cover-shadow);
 }
