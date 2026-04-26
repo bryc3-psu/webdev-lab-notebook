@@ -1,35 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSS Exercise 01 - Books</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <!-- Start with the code from the HTML folder.
-      - Make sure to fix any issues in your HTML code.
-      - Add classes to style the elements on the page. -->
-    <main>
-      <nav>
-        <ul>
-          <li><a href="#asoiaf-books-list">ASOIAF Books</a></li>
-          <li><a href="#first-edition-covers">First Edition Covers</a></li>
-          <li><a href="#pov-characters-table">Table of POV Characters</a></li>
+    <main class="asoiaf">
+
+      <nav class="asoiaf-nav">
+        <ul class="asoiaf-nav-list">
+          <li><a class="asoiaf-nav-link" href="#asoiaf-books-list">ASOIAF Books</a></li>
+          <li><a class="asoiaf-nav-link" href="#first-edition-covers">First Edition Covers</a></li>
+          <li><a class="asoiaf-nav-link" href="#pov-characters-table">Table of POV Characters</a></li>
         </ul>
       </nav>
 
-      <h1>A Song of Ice and Fire - George R.R. Martin</h1>
+      <h1 class="asoiaf-title">A Song of Ice and Fire - George R.R. Martin</h1>
 
-      <h2 id="asoiaf-books-list">A Song of Ice and Fire universe</h2>
-      <ul>
+      <h2 class="asoiaf-section-heading" id="asoiaf-books-list">ASOIAF Books</h2>
+      <ul class="asoiaf-list">
         <li>A Song of Ice and Fire series:
-          <ol>
+          <ol class="asoiaf-ordered-list">
             <li>A Game of Thrones (1996)</li>
             <li>A Clash of Kings (1998)</li>
             <li>A Storm of Swords (2000)</li>
@@ -37,7 +32,7 @@
             <li>A Dance with Dragons (2011)</li>
           </ol></li>
         <li>A Knight of the Seven Kingdoms (2015)
-          <ol>
+          <ol class="asoiaf-ordered-list">
             <li>The Hedge Knight (1998)</li>
             <li>The Sworn Sword (2003)</li>
             <li>The Mystery Knight (2010)</li>
@@ -45,14 +40,18 @@
         <li>Fire &amp; Blood (2018)</li>
       </ul>
 
-      <h2 id="first-edition-covers">First Edition Covers</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/en/9/93/AGameOfThrones.jpg" alt="A Game of Thrones First Edition Cover" height="300">
-      <img src="https://upload.wikimedia.org/wikipedia/en/3/39/AClashOfKings.jpg" alt="A Clash of Kings First Edition Cover" height="300">
-      <img src="https://upload.wikimedia.org/wikipedia/en/2/24/AStormOfSwords.jpg" alt="A Storm of Swords First Edition Cover" height="300">
+      <h2 class="asoiaf-section-heading" id="first-edition-covers">First Edition Covers</h2>
+      <div class="asoiaf-covers">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/93/AGameOfThrones.jpg" alt="A Game of Thrones First Edition Cover" class="asoiaf-cover-img" height="300">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/39/AClashOfKings.jpg" alt="A Clash of Kings First Edition Cover" class="asoiaf-cover-img" height="300">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/24/AStormOfSwords.jpg" alt="A Storm of Swords First Edition Cover" class="asoiaf-cover-img" height="300">
+      </div>
 
-      <h2 id="pov-characters-table">POV Character with the Most Chapters in Each Book</h2>
-      <table>
-        <thead>
+      <h2 class="asoiaf-section-heading" id="pov-characters-table">
+        POV Character with the Most Chapters in Each Book
+      </h2>
+      <table class="asoiaf-table">
+        <thead class="asoiaf-table-head">
           <tr>
             <th rowspan="2">POV Character</th>
             <th colspan="5">Books</th>
@@ -66,7 +65,7 @@
             <th>A Dance with Dragons</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="asoiaf-table-body">
           <tr>
             <td>Eddard Stark</td>
             <td>15</td>
@@ -108,7 +107,7 @@
             <td>42</td>
           </tr>
         </tbody>
-        <tfoot>
+        <tfoot class="asoiaf-table-foot">
           <tr>
             <td colspan="6"><strong>Total POV Chapters (Displayed)</strong></td>
             <td><strong>147</strong></td>
