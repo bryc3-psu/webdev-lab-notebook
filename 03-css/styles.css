@@ -12,6 +12,8 @@
 
   --asoiaf-page-bg: #f2f3f5;
   --asoiaf-text: #333;
+  --asoiaf-heading-color: #1c2028;
+  --asoiaf-heading-border: #b8bcc680;
 }
 
 body {
@@ -24,7 +26,7 @@ body {
 
 .asoiaf {
   background-color: var(--asoiaf-page-bg);
-  font-family: 'Times New Roman', serif;
+  font-family: 'Arial', sans-serif;
   color: var(--asoiaf-text);
 }
  
@@ -34,32 +36,53 @@ body {
  
 .asoiaf-nav-list {
   margin: 0;
-  padding: 1.1rem 2rem;
+  padding: 1.1em 2em;
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 1rem;
+  gap: 1em;
 }
  
 .asoiaf-nav-link {
   font-family: 'Cinzel', serif;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: 500;
-  text-decoration: none;
   color: var(--ice-blue-juvie);
-  padding: 0.35rem 0.85rem;
+  text-decoration: none;
+  padding: 0.35em 0.35em;
 }
  
 .asoiaf-nav-link:hover {
   background-color: var(--ice-blue-juvie);
   color: var(--dark-slate-infinity);
+  border-radius: .2em;
 }
 
 .asoiaf-title {
   font-family: 'Cinzel', serif;
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 800;
   color: var(--gothic-gray-blue);
   text-align: center;
-  margin: 1.6rem 2rem 1.5rem;
+  margin: 1em 2em 1em;
+}
+
+.asoiaf-section-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--asoiaf-heading-color);
+  margin: 1.6em 2em 0.8em;
+  border-bottom: 1px solid var(--asoiaf-heading-border);
+}
+ 
+.asoiaf-list {
+  font-size: 0.8em;
+  margin: 0.4em 0 0 1em;
+}
+ 
+.asoiaf-ordered-list {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: 0.8em 0.5em;
 }
