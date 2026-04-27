@@ -1,4 +1,3 @@
-/* Add your CSS code here  */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
 
 * {
@@ -51,6 +50,7 @@ body {
   display: flex;
   justify-content: center;
   list-style: none;
+  margin: 0em;
   padding: 1em 2em;
   gap: 2.2em;
 }
@@ -174,49 +174,87 @@ body {
   font-weight: 700;
   color: var(--midnight-blue);
   text-align: center;
-  margin-bottom: 1em;
+  margin: 1em 1em;
 }
  
 .ira-form {
-  display: flex;
-  flex-direction: column;
-  margin: 1em 1em;
+  font-size: 1em;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
   gap: 1em;
+  margin: 1em 1em;
 }
  
 .ira-field {
-  display: flex;
+  display: contents;
   align-items: center;
   gap: 1em;
 }
 
 .ira-label {
-  width: 50%;
 }
  
 .ira-input {
-  width: 50%;
   padding: 0.6em 0.8em;
   border: 1px solid var(--ira-input-border);
   border-radius: 0.5em;
 }
 
+.ira-input:focus {
+  border: 1px solid var(--midnight-blue);
+}
+
 .ira-radio-group {
+  /* needs to take two columns to
+   * retain the right ordering */
+  grid-column: span 2;
   border: none;
   padding: 0;
 }
  
 .ira-group-label {
-  font-weight: 700;
 }
  
 .ira-radio-options {
-  padding-left: 4.5em;
+  padding-left: 3.2em;
   margin-top: 0.4em;
 }
 
+.ira-buttons {
+  display: contents;
+}
 
+.ira-btn-submit {
+  background-color: var(--midnight-blue);
+  color: var(--ira-card-bg);
+  width: 100%;
+  height: 3em;
+  border-radius: 0.5em;
+  margin: 1em 0em;
+  transition: transform .5s ease;
+}
+ 
+.ira-btn-submit:hover {
+  box-shadow: 4px 4px 6px #00000090
+}
+
+.ira-btn-reset {
+  background-color: var(--asoiaf-table-body-bg);
+  width: 100%;
+  height: 3em;
+  border-radius: 0.5em;
+  margin: 1em 0em;
+  transition: transform .5s ease;
+}
+
+.ira-btn-reset:hover {
+  box-shadow: 4px 4px 6px #00000090
+}
+ 
 .ira-footer {
   font-size: 0.85em;
-  margin-top: 1.5em;
+  margin: 1em 1.5em;
 }
