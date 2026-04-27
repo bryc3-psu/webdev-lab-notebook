@@ -10,13 +10,17 @@
   --gothic-gray-blue: #6f8796;
   --dark-slate-infinity: #1f2a33;
 
-  --asoiaf-page-bg: #f2f3f5;
-  --asoiaf-text: #333;
+  --asoiaf-page-bg: #fefefe;
+  --asoiaf-text: #111;
   --asoiaf-heading-color: #1c2028;
   --asoiaf-heading-border: #b8bcc680;
   --asoiaf-covers-bg: #e2e4e8;
   --asoiaf-covers-border: #bcc0c9;
   --asoiaf-cover-shadow: #22222259;
+  --asoiaf-table-border: #adb2be;
+  --asoiaf-table-head-bg: #cccccc5e;
+  --asoiaf-table-body-bg: #fefefe;
+  --asoiaf-table-alt-bg: #cecece10;
 }
 
 body {
@@ -41,9 +45,8 @@ body {
   display: flex;
   justify-content: center;
   list-style: none;
-  margin: 0;
-  padding: 1.1em 2em;
-  gap: 1em;
+  padding: 1em 2em;
+  gap: 2.2em;
 }
  
 .asoiaf-nav-link {
@@ -52,13 +55,13 @@ body {
   font-weight: 500;
   color: var(--ice-blue-juvie);
   text-decoration: none;
-  padding: 0.35em 0.35em;
 }
  
 .asoiaf-nav-link:hover {
   color: var(--dark-slate-infinity);
   background-color: var(--ice-blue-juvie);
-  border-radius: .2em;
+  border-radius: 0.2em;
+  padding: 0.2em 0.3em;
 }
 
 .asoiaf-title {
@@ -75,35 +78,68 @@ body {
   font-size: 1.2em;
   font-weight: 700;
   color: var(--asoiaf-heading-color);
-  margin: 1.6em 2em 0.8em;
+  margin: 1em 2em 1em;
+  padding-bottom: .2em;
   border-bottom: 1px solid var(--asoiaf-heading-border);
 }
  
 .asoiaf-list {
-  font-size: 0.8em;
-  margin: 0.4em 0 0 1em;
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 2em;
+  margin: 1em 2em 1em;
+  padding-left: 2.5em;
 }
  
 .asoiaf-ordered-list {
   font-size: 0.8em;
-  line-height: 1.5em;
-  margin: 0.8em 0.5em;
+  line-height: 2em;
 }
 
 .asoiaf-covers {
   display: flex;
   justify-content: center;
-  margin: 0.5em 0em 1em;
+  margin: 1em 0em 1em;
   gap: 1.2em;
 }
  
+/* enlargement method from: https://w3bits.com/css-image-hover-zoom */
 .asoiaf-cover-img {
   display: flex;
   width: 28%;
   height: auto;
-  border-radius: 4px;
+  transition: transform .5s ease;
 }
  
 .asoiaf-cover-img:hover {
-  box-shadow: 3px 8px 20px var(--asoiaf-cover-shadow);
+  transform: scale(1.07);
+}
+
+.asoiaf-table {
+  font-size: 0.9em;
+  justify-content: center;
+  width: 92%;
+  border-collapse: collapse; /* https://stackoverflow.com/a/9442525 */
+  margin: 1em 4em 1em 3em;
+}
+
+.asoiaf-table th,
+.asoiaf-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.55em 0.7em;
+  border: 1px solid var(--asoiaf-table-border);
+}
+
+.asoiaf-table-head,
+.asoiaf-table-foot {
+  background-color: var(--asoiaf-table-head-bg);
+}
+
+.asoiaf-table tbody tr:nth-child(odd) {
+  background-color: var(--asoiaf-table-body-bg);
+}
+
+.asoiaf-table tbody tr:nth-child(even) {
+  background-color: var(--asoiaf-table-alt-bg);
 }
