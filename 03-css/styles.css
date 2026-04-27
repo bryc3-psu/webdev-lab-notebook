@@ -164,9 +164,9 @@ body {
  
 .ira-card {
   background-color: var(--ira-card-bg);
+  justify-content: center;
   border-radius: 1em;
-  width: 55%;
-  padding: 1em 4em;
+  width: 40%;
 }
 
 .ira-title {
@@ -180,6 +180,7 @@ body {
 .ira-form {
   display: flex;
   flex-direction: column;
+  margin: 1em 1em;
   gap: 1em;
 }
  
@@ -190,14 +191,32 @@ body {
 }
 
 .ira-label {
-  color: var(--ira-label-color);
-  width: 14em;
+  width: 50%;
 }
  
 .ira-input {
-  width: 14em;
+  width: 50%;
   padding: 0.6em 0.8em;
   border: 1px solid var(--ira-input-border);
   border-radius: 0.5em;
-  background-color: var(--ira-input-bg);
+}
+
+.ira-radio-group {
+  border: none;
+  padding: 0;
+}
+ 
+.ira-group-label {
+  font-weight: 700;
+}
+ 
+.ira-radio-options {
+  padding-left: 4.5em;
+  margin-top: 0.4em;
+}
+
+
+.ira-footer {
+  font-size: 0.85em;
+  margin-top: 1.5em;
 }
