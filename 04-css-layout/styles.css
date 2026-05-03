@@ -168,7 +168,6 @@ main.grid-container {
 /* Mobile */
 @media (max-width: 48rem) {
   main.grid-container {
-    height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: auto 3fr 3fr auto auto;
     grid-template-areas:
