@@ -95,7 +95,7 @@ body {
 }
 
 /* Exercise 03 - CSS Grid */
-.grid-container {
+section.grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 5rem 20rem 5rem 5rem;
@@ -112,10 +112,6 @@ body {
 .item3 {
   grid-column: 9 / 13;
 }
-.item7 {
-  grid-column: 1 / 5;
-  grid-row: 3;
-}
 .item4 {
   grid-column: 5 / 9;
   grid-row: 3;
@@ -127,7 +123,65 @@ body {
 .item6 {
   display: none;
 }
+.item7 {
+  grid-column: 1 / 5;
+  grid-row: 3;
+}
 .item8 {
   grid-column: 1 / 13;
 }
+
 /* Exercise 04 - CSS Grid Areas */
+main.grid-container .header  { grid-area: header; }
+main.grid-container .article { grid-area: article; }
+main.grid-container .aside   { grid-area: aside; }
+main.grid-container .section { grid-area: section; }
+main.grid-container .footer  { grid-area: footer; }
+main.grid-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 4fr 3fr auto;
+  grid-template-areas:
+    "header  header"
+    "aside   article"
+    "section section"
+    "footer  footer";
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* Desktop first method for different mobile vs tablet vs PC layouts comes from:
+ * https://www.kadencewp.com/help-center/docs/kadence-theme/specify-different-css-styles-for-mobile-tablet-and-pc-layouts */
+@media (max-width: 64rem) {
+  main.grid-container {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 4fr 2fr auto;
+    grid-template-areas:
+      "header  header"
+      "article aside"
+      "section section"
+      "footer  footer";
+  }
+}
+
+/* Mobile */
+@media (max-width: 48rem) {
+  main.grid-container {
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 3fr 3fr auto auto;
+    grid-template-areas:
+      "header"
+      "article"
+      "section"
+      "aside"
+      "footer";
+  }
+}
+
+main.grid-container .grid-item {
+  text-align: left;
+  vertical-align: top;
+  border-radius: 0.3rem;
+}
