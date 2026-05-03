@@ -7,6 +7,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* hidden h1 for accessibility (to match screenshotss without heading)
+ * from: https://webaim.org/techniques/css/invisiblecontent */
+.hide {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
 /* Exercise 01 - Center */
 .container {
   display: flex;
